@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+td{text-align:center;}
+</style>
+</head>
+<body>
+<h2>[1단계:개념] 1. form의 속성을 예제와 함께 기술하세요.</h2>
+<div style="background-color:skyblue">
+		<h3>속성</h3><br>
+ 	   <h4>	1) name: 폼의 이름을 지정</h4>
+ 	  <h4> 	2) action</h4>
+ 	   		- 폼 데이터를 처리할 웹 서버 응용프로그램(jsp,php,asp등)<br>
+ 	   			요청값을 서버단(백엔드)에서 받을 수 있다.<br>
+ 	   		- submit 버튼을 클릭하면 브라우저는 action에 지정한 웹서버<br>
+ 	   			응용프로그램을 실행한다.<br>
+ 	   <h4>	3) method속성</h4>
+ 	   		- 폼데이터를 웹 서버로 전송하는 방식<br>
+ 	   		- 전송방식 내용<br>
+ 	   			default : get 방식으로 설정하지 않으면 이방식인데 url주소창에 요청값을 <br>
+ 	   					  key=value 형식으로 보이게 한다.<br>
+ 	   			post : 설정을 하면 url 주소창에는 보이지 않지만 내부적으로 요청값을 key=value형식으로 전송한다.<br>
+ 	   <h4>	4) target</h4>
+ 	   		- frame단위나 새로운 윈도우창에 전송할 때, frame처리시 설정했던 옵션을 활용해서 처리한다.<br>
+ 	   			_top,_parent,_blank<br>
+ 
+ 		<h4>5) enctype</h4>
+ 			- 폼 데이터를 웹서버로 전송할때, 암호화 방식이 필요한 경우에 사용된다.<br>
+ 				파일 전송시도 binary 데이터를 보내야겠기에 이 부분 속성을 설정한다.</div><br>
+ 			<form action="a07_loginResult.jsp" method="post" target="frame02">
+		 	아이디:<input type="text" name=id><br>
+		 	패스워드:<input type="password" name=pass><br>
+		 		<input type="submit" value="회원등록">
+		 </form>
+		 <iframe name="frame02" srcdoc="<h3>등록된 회원아이디/패스워드</h3>" width="50%" height="100"></iframe>
+		 
+<hr><h2>[1단계:개념] 2. form 데이터 전송시 사용하는 method속성의 속성값 get/post방식의 차이를 예제를 통해서 기술하세요.</h2>
+ 	   			default : get 방식으로 설정하지 않으면 이방식인데 url주소창에 요청값을 
+ 	   					  key=value 형식으로 보이게 한다.<br>
+ 	   			post : 설정을 하면 url 주소창에는 보이지 않지만 내부적으로 요청값을 key=value형식으로 전송한다.
+ 	 <h3>검색(get방식)</h3>
+  	<form>
+  		검색할내용:<input type="text" name="sch"/>
+  		<input type="submit" value="검색"/>
+  	</form>
+  	
+  	  	<h3>검색(post방식)</h3>
+  	<form action="a05_rev.jsp" method="post" >
+  		검색할내용:<input type="text" name="sch"/>
+  		<input type="submit" value="검색"/>
+  	</form>
+<hr><h2>[1단계:확인] 3. 구매할 도서명과 출판사 도서가격을 입력하고 post방식으로 전송하고 출력 하세요.</h2>
+<form action="/a03_form/a05_rev.jsp" method="post" target="frame1103" >
+  		구매할책:<input type="text" name="bname"/>
+  		출판사:<input type="text" name="publisher"/>
+  		도서가격:<input type="text" name="price"/>
+  		<input type="submit" value="검색"/>
+  	</form>
+  	<iframe name="frame1103" srcdoc="<h4>구매도서정보</h4>" width="50%" height="100"></iframe>
+  	
+<hr><h2>[1단계:개념] 4. form과 target의 관계를 옵션의 예시에 따라 처리하세요</h2>
+				<h2>form_target_blank</h2>
+				<form action="/a03_form/a05_rev.jsp" method="post" target="_blank">
+					예시문장:<input type="text" name="exp1103">
+				</form>
+				<h2>form_target_self</h2>
+				<form action="/a03_form/a05_rev.jsp" method="post" target="_self">
+					예시문장:<input type="text" name="exp1103">
+				</form>
+				<h2>form_target_parent</h2>
+				<form action="/a03_form/a05_rev.jsp" method="post" target="_parent">
+					예시문장:<input type="text" name="exp1103">
+				</form>
+				<h2>form_target_top</h2>
+				<form action="/a03_form/a05_rev.jsp" method="post" target="_top">
+					예시문장:<input type="text" name="exp1103">
+				</form>
+				<h2>form_target_frame</h2>
+				<form action="/a03_form/a05_rev.jsp" method="post" target="frame1103_1">
+					예시문장:<input type="text" name="exp1103">
+				</form>
+				<iframe name="frame1103_1" srcdoc="<h4>target예시 frame</h4>" width="50%" height="100"></iframe>
+<hr><h2>[1단계:확인] 5. form/frame 3개씩을 만들어 과일가게, 옷가게, 컴퓨터가게에 해당 frame과 jsp 파일을 만들어 입력 정보 각각 전송하세요.</h2>
+				<h2>컴퓨터가게</h2>
+				<form action="1103_5/computer.jsp" method="post" target="frame1103com">
+					컴퓨터회사:<input type="text" name="comname">
+					가격:<input type="text" name="comprice">
+					<input type="submit" value="입력">
+				</form>
+				<h2>옷가게</h2>
+				<form action="1103_5/shop.jsp" method="post" target="frame1103com">
+					옷구분:<input type="text" name="clothes">
+					옷색깔:<input type="text" name="clothescolor">
+					가격:<input type="text" name="clothesprice">
+					<input type="submit" value="입력">
+				</form>
+				<h2>과일가게</h2>
+				<form action="1103_5/fruit.jsp" method="post" target="frame1103com">
+					구매할 과일:<input type="text" name="fname">
+					가격:<input type="text" name="fprice">
+					구매갯수:<input type="text" name="fcnt">
+					<input type="submit" value="입력">
+				</form><br>
+				<iframe name="frame1103com" width="50%" height="100"></iframe>
+<hr><h2>[1단계:개념] 6. input의 type의 속성에 따른 특징을 기술하세요</h2>
+		<h3>1. input 태그</h3>
+		1) 대부분은 input 태그로 시작하여 type의 속성에 따라
+		2) type 속성
+			text : 한줄 텍스트 입력 창 ex) <input type="text">
+			password : 암호 임력을 위한 한줄 텍스트 입력창
+			button : 단순 버튼
+			hidden : 데이터는 보이지 않지만 전송할 필요가 있을 때, 활용
+				ex) 기능버튼 등록/수정/삭제이 있지만, 요청값에 의해서 해당 내용을 전송해야할 때, 활용 된다.
+					즉, 요청값이 표시가 되지는 않지만 그 요청값이 프로세스에 따라 보이지 않게 전송될 때
+					활용된다.
+			checkbox : 체크박스(다중선택) []
+			radio : 라디오 박스(단일선택) ()
+			file : 파일 선택
+			month|week|date|time|datetime-local : 년,월,일,시간등의 입력창
+			number|range : 스핀 버튼과 슬라이드바로 편리한 숫자 입력창
+			color : 색상 선택 창
+			email|url|tel|search : 이미지,url, 전화번호, 검색키워드 등 형식 검사 기능을 가진 텍스트 입력창
+			submit : form전체 데이터를 서버에 전송하는 버튼
+			reset : form전체 데이터를 입력 중, 초기화가 필요할 때, 클릭 시 초기화 처리
+			
+
+<hr><h2>[1단계:개념] 7. input의 type의 이외의 속성에 따른 특징을 기술하세요</h2>
+	<h3>2. select 태그</h3>
+	선택 형식으로 처리할 수 있는 요소 객체
+		
+	<h3>3. botton</h3>
+		1) 기본형식
+			<button type="button|submit|reset">버튼의 레이블</button>
+				주의) button태그의 default type은 submit이기 때문에, 설정하지 않고, 버튼을 클릭하면
+				서버로 전송되어 모든데이터가 초기화 된다.
+		2) 버튼모양 요소객체
+	<h3>4. textarea</h3>
+		1)기본형식
+			<textarea cols="2" rows="2" ></textarea>
+		2)여러줄 텍스트입력창
+<hr><h2>[1단계:확인] 8. 로그인 화면을 테이블 안에 자리수를 입력제한을 하고, 테이블에 크기에 맞추어 표현하세요.</h2>
+			<form>
+			<table border="1">
+			<tbody>
+				<tr><td>아이디</td><td><input type="text" name="id" size="10" maxlength="10"></td></tr>
+				<tr><td>패스워드</td><td><input type="password" name="password" size="10" maxlength="10"></td></tr>
+				<tr><td colspan="2" style="text-align:center"><input type="submit"value="로그인하기"></td></tr>
+			</tbody>
+			</table>
+			</form>
+<hr><h2>[1단계:확인] 9. input의 속성을 적절하게 이용하여 테이블 안에 form 요소객체를 만들어 회원등록 폼을 만들어 보세요.
+                (회원아이다, 패스워드/패스워드확인, 이름, 메일주소, 주소, 성별, 자기소개서 )</h2>
+                <style>
+                table{border-collapse:collapse; cellpadding:5px;}
+                th,td{border:1px solid black;}
+                th{background-color:#53544e; color:white;}
+                </style>
+			<form>
+			
+			<table border="1">
+			<tbody>
+			<tr><th>아이디</th><td><input type="text" name="id" size="10" maxlength="10" placeholder="10자리 이하"></td></tr>
+			<tr><th>패스워드</th><td><input type="text" name="id" size="10" maxlength="10" placeholder="10자리 이하"></td></tr>
+			<tr><th>국적여부</th><td>내국인<input type="radio" name="checkIn" value="내국인">외국인<input type="radio" name="checkIn" value="외국인"></td></tr>
+			<tr><th>성별</th><td>남<input type="radio" name="gender" value="남자"> 여<input type="radio" name="gender" value="여자"></td></tr>
+			<tr><th>성별2</th><td><input type="text" name="gender2" maxlength="20" placeholder="성별입력" list="gender2">
+			<datalist id="gender2">
+				<option value="남">
+				<option value="여">
+			</datalist>
+			</td></tr>
+			<tr><th>이름</th><td><input type="text" name="id" size="10" maxlength="4"></td></tr>
+			<tr><th>생년월일</th><td><input type="number" name="year" min="1970" max="2022" value="1970" step="1">년
+								  <input type="number" name=month" min="1" max="12" value="1" step="1">월
+							       <input type="number" name="day" min="1" max="31" value="1" step="1">일</td></tr>
+			<tr><th>메일주소</th><td><input type="text" name="femail" size="10"><input type="text" name="@email" size="10"list="@email">
+			<datalist id="@email">
+ 			<option value="@name.com">
+ 			<option value="@naver.com">
+ 			<option value="@gamil.com">
+ 			</datalist></td></tr>
+			<tr><th>주소</th><td><input type="text" name="adress" size="36" maxlength="50"></td></tr>
+			<tr><th>자기소개서</th><td><textarea name=write cols="40" rows="10" placeholder="자기소개서 작성"></textarea></td></tr>
+			<tr><td align="center" colspan="2"><input type="submit" value="가입하기">등록 1번방법 </td></tr>
+			<tr><td colspan="2"><button>회원등록</button> 등록2번방법</td></tr>
+			</tbody>
+			</table>
+			</form>
+
+
+<hr><h2>[1단계:확인] 10. datalist를 활용하여 커피점에서 커피의 종류를 표시하고, 주문갯수를 1~10까지 표시하여 
+                 버튼클릭시, 주문한 내용을 서버에 요청값으로 처리되게 하세요. </h2>
+         <h3>ex)구매과일 목록 5개 단가리스트 1000~5000으로 5개처리 </h3>
+ 	<form action="/a03_form/a06_rev.jsp" method="post" target="frame1103_10">
+ 	<datalist id="coffeename">
+ 		<option value="아메리카노">
+ 		<option value="딸기프라푸치노">
+ 		<option value="레몬차">
+ 		<option value="카라멜 마키아또">
+ 		</datalist>
+ 	<datalist id="coffecnt">
+ 		<option value="1">
+ 		<option value="2">
+ 		<option value="3">
+ 		<option value="4">
+ 		<option value="5">
+ 		<option value="6">
+ 		<option value="7">
+ 		<option value="8">
+ 		<option value="9">
+ 		<option value="10">
+ 		</datalist>
+ 	커피:<input type="text" name="coffee" list="coffeename"> 
+ 	 가격:<input type="text" name="coffeecnt" list="coffecnt">
+ 		<input type="submit" value="구매">
+ 		</form>	
+ 	<iframe name="frame1103_10" srcdoc="<h3>커피구매</h3>" width="50%" height="100"></iframe>
+<hr><h2>[1단계:개념] 11. 버튼의 종류를 형식에 따라 분류하여 에제를 만드세요  </h2> 
+<h3>버튼유형1(type형태)</h3>
+ <form>
+ <input type="text" name="content" value="reset/submit테스트용"/><br>
+ <input type="button" value="버튼1(button)" onclick="alert('클릭!!')"/><br>
+ <input type="reset" value="버튼2(reset)"/><br>
+ <!-- form안에 입력된 내용을 다시 초기화 시킴 -->
+ <input type="submit" value="버튼3(submit)"/><br>
+ <input type="image" value="버튼4(image)" src="/a00_img/button.jpg" width="70" height="50"/><br>
+  </form>
+  <h3>버튼유형2(button태그)</h3>
+  <form>
+  	내용:<input type="text" value="reset/submit테스트용/"><br>
+  	<button type="button" onclick="alert('클릭!!')">일반버튼</button><br>
+  	<button type="reset">reset버튼</button><br>
+  	<button type="submit">submit버튼</button><br>
+  	<button>type설정을 하지않은 버튼</button><br>
+  	<!-- type설정을 하지않으면 submit가 되므로 주의 -->
+  </form>
+
+
+</body>
+</html>

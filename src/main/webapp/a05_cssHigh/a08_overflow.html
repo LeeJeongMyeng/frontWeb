@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+ #overflow
+ 	1.지정된 화면의 크기보다 더 많은 내용을 컨테이너형 요소에 포함될 때,
+ 		처리하는 속성
+ 	2. 속성값
+ 		hideen:보이지않게 처리
+ 		visible: 넘기게 보이게 처리
+ 		scroll:스크롤해서 보이게 처리
+*/
+div{ width:150px; height:50px; border:1px solid green; margin:300px;}
+div#opt01{ overflow:hidden;}
+div#opt02{ overflow:visivle;}
+div#opt03{ overflow:scroll;}
+</style>
+</head>
+<body>
+	<div>안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</div>
+	<div id="opt01">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</div>
+	<div id="opt02">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</div>
+	<div id="opt03">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</div>
+	<div id="opt01">
+		<h2>물건설명</h2>
+		<div>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</div><br>
+		<div>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</div><br>
+		<div>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</div><br>
+		<div>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</div><br>
+	</div>
+	<div id="opt03">
+		<h2>물건설명</h2>
+		<div id="opt04">ㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎ</div>
+		zzzzzzzzzzzzzzzzzzzzzzzzz<br>
+		zzzzzzzzzzzzzzzzzzzzzzzzz<br>
+		zzzzzzzzzzzzzzzzzzzzzzzzz<br>
+	</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>[1단계:개념] 1. check와 radio의 공통점과 차이점을 기술하세요. </h2>
+			공통점: 체크 할수있는 기능이 생성이 된다.
+				  체크를 한 상태로 데이터를 보내면 해당 데이터가 전송된다.
+			차이점: checkbox는 같은 name을 쓰는 것들끼리 중복입력 처리가 된다.
+				  radio는 같은 name을쓰는 것들끼리에서는 하나만 선택할 수 있도록 처리가 된다.
+<hr>
+<h2>[1단계:확인] 2. 앞으로 5년간은 년도별 check로 월별은 radio를 만들어 앞으로 년도별 여행 월으로 check해서
+            처리할려고 한다. (년도-다중, 월-단일) 처리하세요.</h2>
+            <form>
+            <h3>년도 선택(다중)</h3>
+            2023년<input type="checkbox" name="year" value="2023">
+            2024년 <input type="checkbox" name="year" value="2024">
+            2025년<input type="checkbox" name="year" value="2025">
+            2026년<input type="checkbox" name="year" value="2026">
+            2027년<input type="checkbox" name="year" value="2027">
+            <h3>월선택(단일)</h3>
+            1월<input type="radio" name="month" value="1">
+            2월<input type="radio" name="month" value="2">
+            3월<input type="radio" name="month" value="3">
+            4월<input type="radio" name="month" value="4">
+            5월<input type="radio" name="month" value="5">
+            6월<input type="radio" name="month" value="6"><br>
+            7월<input type="radio" name="month" value="7">
+            8월<input type="radio" name="month" value="8">
+            9월<input type="radio" name="month" value="9">
+            10월<input type="radio" name="month" value="10">
+            11월<input type="radio" name="month" value="11">
+            12월<input type="radio" name="month" value="12"><br>
+            <button>선택완료</button>
+            </form><hr>
+<h2>[1단계:개념] 3. select의 기본 속성과 option 속성을 기술하세요.</h2>
+		<h3>select속성</h3>
+			 1) size: 콤보박스 창 크기(보일수 있는 최대 항목 갯수), default 1
+			 2) multiple : 이 속성 있으면 다수 항목 선택 가능 - ctrl 키를 눌러서 여러 항목을 선택
+			 
+		<h3>option속성</h3>
+		 	value: 이 항목이 선택되었을 때, 웹서버에 전송되는 값
+		 	selected : 이 속성이 있으면 초기에 선택상태로 출력
+		 	<hr>
+<h2>[1단계:확인] 4. 테이블 안에 컴퓨터 부품별로 사양에 따른 select 박스를 만들되, 항목별로 2개가 보이며 다중 선택이 
+           가능하게 처리하세요.</h2>           
+           <h3>CPU [i5 3.1GHZ] Ram[2]....<br>
+                  [i7 4.1GHZ] Ram[2]<br>
+              [AMD    ]</h3>
+              
+              <form>
+              <table width=30%>
+              <col width=15%>
+              <col width=15%>
+              <col width=15%>
+              <col width=15%>
+              <col width=15%>
+              <col width=15%>
+              	<tr><th>CPU</th>
+              	<td>
+              		<select name="cpu" size="2">
+  					<option value="i5 3.1GHZ" selected>i5 3.1GHZ</option>
+  					<option value="i7 4.1GHZ">i7 4.1GHZ</option>
+				  	<option value="i6 2.1GHZ">i6 2.1GHZ</option>
+				  	<option value="i3 1.1GHZ" >i3 1.1GHZ</option>
+  				</select></td></tr>
+  			   <tr>
+  			   <th>RAM</th>
+  			   <td>
+  			   <select name="ram" size="2" multiple="multiple">
+  					<option value="4G" selected>4G</option>
+  					<option value="8g">8G</option>
+				  	<option value="16g">16G</option>
+				  	<option value="64g" >64G</option>
+  			</select></td>
+  			</tr>
+  			    <tr>
+  			   <th>GPU</th>
+  			   <td>
+  			   <select name="graphicCard" size="2" multiple="multiple">
+  					<option value="rtx2060" selected>rtx2060</option>
+  					<option value="rtx2070">rtx2070</option>
+				  	<option value="rtx2080">rtx2080</option>
+				  	<option value="rtx3060" >rtx3060</option>
+  			</select></td>
+  			</tr>
+ 				<tr><td><input type="submit"/></td></tr>	
+ 				</table>
+ 			</form>
+            <hr>
+            
+<h2>[1단계:개념] 5. label와 form하위 객체간의 연결관계를 캡션 설정하는데 기본 코드를 기술하세요</h2>
+<h2>로그인 폼</h2>
+ <form name="login" method="get">
+ 	<label>사용자ID:<input type="text" name="id" size="15"></label><br>
+ 	<label for="pass">비밀번호:</label>
+ 	<input id="pass" type="password" name="pass" size="15">
+ 	<input type="submit">
+ </form><hr>
+<h2>[1단계:확인] 6. label과 radio로 연결하여 부서명 5개를 체크하여 요청값이 부서명을 클릭하고 submit할시
+            해당 check된 부서명이 서버에 전송되게 하세요.</h2>
+<h2>로그인 폼</h2>
+ <form name="deptno1104" method="get">
+ 	<label>회계:<input type="radio" name="dept1104" value="회계"></label><br>
+ 	<label>생산:<input type="radio" name="dept1104" value="생산"></label><br>
+ 	<label>연구소:<input type="radio" name="dept1104" value="연구소"></label><br>
+ 	<label for="pass2">총무</label>
+ 	<input id="pass2" type="radio" name="dept1104" value="총무"><br>
+ 	<label for="pass1">인사</label>
+ 	<input id="pass1" type="radio" name="dept1104" value="인사"><br>
+ 	<input type="submit">
+ </form>    
+</body>
+</html>

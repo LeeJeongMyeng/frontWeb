@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+ #display:inline
+ 	1.div를 inline으로 수정
+*/
+div>div{
+	display:inline;
+	border:1px dashed navy;
+}
+/* ex) p의 자손p태그는 inline으로 처리*/
+div p{display:inline; border: 2px solid black;}
+	p{width:100px; height:100px; background:yellow;}
+</style>
+</head>
+<body>
+		<div style="background:orange">
+			<div>인라인 div1</div>
+			<div>인라인 div2</div>
+			<div>인라인 div3</div>	
+		</div>
+		<div style="background:green">
+			<div>인라인 div1</div>
+			<div>인라인 div2</div>
+			<div>인라인 div3</div>	
+		</div>
+		
+		<div>
+			<p>인라인 p1</p>
+			<p>인라인 p2</p>
+			<p>인라인 p3</p>
+		</div>
+		
+<!-- 
+	#display:inline-block
+		1.div를 인라인 블록 박스로 수정
+ -->		
+	<style>
+		div div.inblock{
+			display:inline-block;
+			border:2px dotted orangered;
+			background:powderblue;
+			margin:10px;
+			width:60px; height:80px;
+		}
+		
+/* ex)p안에 자손h2를 inline-block으로 넓이와 폭이되도록 설정*/
+
+div h2.exph2{display:inline-block; border:1px solid green; width:200px; height:100px; background:red;}	
+	</style>
+		<div style="background:orange;">
+			<div class="inblock">인라인 블럭</div>
+			<div class="inblock">인라인 블럭</div>
+			<div class="inblock">인라인 블럭</div>
+		</div>		
+		<div style="background:orange;">
+			<div class="inblock">인라인 블럭</div>
+			<div class="inblock">인라인 블럭</div>
+			<div class="inblock">인라인 블럭</div>
+		</div>		
+		
+			<div>
+			<h2 class="exph2">예시입니다.</h2>
+			<h2 class="exph2">예시입니다.</h2>
+			<h2 class="exph2">예시입니다.</h2>
+			<h2 class="exph2">예시입니다.</h2>
+			</div>
+			<div>
+			<h2 class="exph2">예시입니다.</h2>
+			<h2 class="exph2">예시입니다.</h2>
+			<h2 class="exph2">예시입니다.</h2>
+			<h2 class="exph2">예시입니다.</h2>
+			</div>
+		
+</body>
+</html>

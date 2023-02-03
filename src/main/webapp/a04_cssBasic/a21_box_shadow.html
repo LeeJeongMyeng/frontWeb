@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+	#박스 그림자 , box-shadow
+		1. 박스 전체에 그림자효과
+		2. 박스 전체에 그림자 효과
+			box-shadow : h-shadow v-shadow
+						blur-radius spread-radius color |none|inset
+				spread-radius : 그림자 크기(선택, 디폴트0)
+				-inset : 음각 박스로 보이게 박스 상단 안쪽(왼쪽과 위쪽에 그림자 형성)
+*/
+.redBox{box-shadow:10px 20px red;}
+.blurBox{box-shadow:10px 10px 10px skyBlue;}
+.multiEffect{box-shadow:2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
+div{width:150px; height:70px; padding:10px; margin:20px; border:10px solid lightgray;
+	background-image:url("./media/spongebob.png");
+	background-size:150px 100px;
+	background-repeat:no-repeat;
+	text-align:right;
+	}
+.banana{	width:200px; height:100px; padding:20px; margin:20px; border:5px solid orange;
+			box-shadow:0px 0px 25px yellow;
+			background-image:url("/a00_img/banana.jpg");
+			background-size:200px 170px;
+			background-repeat:no-repeat;
+			text-align:right;	
+			}
+/* p태그로 선언해서, 이미지하나 꾸며보기*/
+</style>
+</head>
+<body>
+	<h3>박스 그림자 만들기</h3>
+	<div class="redBox">뚱이와 함께</div>
+	<div class="blurBox">뚱이와 함께</div>
+	<div class="multiEffect">뚱이와 함께</div>
+	<p class="banana">바나나</p>
+</body>
+</html>

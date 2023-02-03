@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	td{text-align:center;} /*
+	css로 글자를 중앙정렬.. td에는 align속성이 없기때문이이다
+	ps) 일반적으로 기본으로 중앙정렬을 하면 가독성이 좋고, 보다 세밀하게 하려면
+		cellpadding옵션과 함께, 코드성 데이터는 중앙정렬, 일반 문자열 데이터는
+		왼쪽 정렬, 숫자형 데이터의 경우 오른쪽정렬을 처리한다.
+	*/
+	th{background-color:yellow; color:green; border-bottom:1px double black;}/* 헤더 하단줄에 2중줄 설정*/
+	tr:hover{background-color:tomato;} /* 해당 열에 마우스 올리면 색깔이 변함 */
+	table{border-collapse:collapse;} /*테이블의 선 표시방법 지정하는 것*/
+	/*
+	border : 2px double blue;
+		테두리에 대한 옵션을 굵기,종류,색상으로 설정함.
+		border-bottom : 해당 th의 하단 부분에만 설정 옵션을 처리할 때, 활용한다.
+	
+	테이블의 border는 2중의 2D형식 라인이 default로 지원한다.
+	이것을 한줄로 바꾸려면 css에서 table속성 border-collapse로 collapse처리해야 한다.
+	 */
+</style>
+</head>
+<body>
+<!-- 
+ #테이블 기타 속성
+ 1. align : 전체화면 대비 정렬
+ 2. width="%" : 전체화면대비 테이블의 폭을 %로 처리
+ -->
+<table align="center" border="10" cellspacing="10" width="80%" height="200" cellpadding="10">
+ <tr><th>empno</th><th>ename</th><th>deptno</th></tr>
+ <tr><td>10번</td><td>이정명</td><td>20</td></tr>
+ <tr><td>10번</td><td>이정명</td><td>20</td></tr>
+ <tr><td>10번</td><td>이정명</td><td>20</td></tr>
+ </table>
+</body>
+</html>

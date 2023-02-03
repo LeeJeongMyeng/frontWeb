@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* 속성이 id로 설정된것은 #아이디명으로 접근 및 선택  */
+	#css01:link{ /*초기 링크 색상*/
+	 color:pink;
+	 font-size:200%;
+	 text-decoration:none; /*기본설정인 언더라인을 지운다.*/
+	 background-color:navy;
+	}
+	#css01:visited{ /*방문후 링크색상*/
+	 color:orange;
+	}
+	#css01:active{ /*클릭하고있을떄 색깔*/
+	 color:navy;
+	}
+</style>
+</head>
+<body>
+ <!-- 
+ #하이퍼링크 텍스트의 색상
+ 	1. 하이퍼링크는 상태에 따라서 색상이 바뀌어 진단.
+ 		1) 링크 텍스트의 처음색 - 밑주로가함께 blue
+ 		2) 방문 후 링크의 색 - purple
+ 		3) 마우스 링크를 누르고잇는동안 (active link) - red
+ 	2. 링크 색 변경 가능
+ 		1) css3를 이용하여 링크 색 지정 가능 
+  -->
+  <h2>링크 만들기</h2><hr>
+  <ul>
+		<li><a href="http://www.naver.com">네이버</a></li>
+		<li><a href="https://www.w3schools.com">w3school</a></li>
+		<li><a href="/a01_start/a02_backend.html">내부페이지</a></li>
+		<li><a id="css01" href="/a01_start/a03_frontProg.html">내부페이지</a></li>
+  </ul>
+  <!-- ex)  다른 html파일-->
+  
+ </body>
+</html>

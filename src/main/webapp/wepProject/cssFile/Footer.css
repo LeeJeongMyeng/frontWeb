@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.Main_foot{
+	float:left;
+	position:relative;
+	margin-left: 218px;
+
+}
+.Main_foot h1>span{
+	font-size:20px;
+}
+
+
+.Main_foot input{
+width:180px;
+height:50px;
+position:relative;
+top:-10px;
+margin-right:15px;
+border:0
+}
+
+.call_info{
+	display:inline-block;
+	margin-top:20px;
+	color:gray;
+	font-size:15px;
+}
+
+.call_email{
+	font-size:15px;
+	color:gray;
+}
+
+.Main_foot_right{
+float:right;
+margin-right:20px;
+}
+.Main_foot_right li{
+display:inline-block;
+margin-left:10px;
+font-size:15px;
+}
+
+.Main_foot_right div:nth-child(1) li:nth-child(5){
+	font-weight:bold;
+}
+
+.Main_foot_right div:nth-child(2){
+	padding-top:50px;
+	font-size:15px;
+}
+
+#foot_sns{
+	position:relative;
+	top:30px;
+}
+
+#foot_sns img{
+	width:30px;
+	height:30px;
+	margin-right:10px;
+}

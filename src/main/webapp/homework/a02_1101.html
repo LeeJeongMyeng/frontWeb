@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+td{text-align:center;}
+th{background-color:black; color:white;}
+tr:hover{background-color:tomato;} /* 해당 열에 마우스 올리면 색깔이 변함 */
+</style>
+</head>
+<body>
+
+<!--  [1단계:개념] 1. 이미지의 속성과 경로(상대적/절대적)을 기본예제를 통해 기술하세요.-->
+			같은폴더 이미지:<img src="img01.jpg" width="100" height="100"/><br>
+			다른폴더 이미지(디폴트경로제외 추가경로만 작성): <img src="/a00_img/img03.jpg" width="100" height="100"/><br>
+<!-- [1단계:코드] 2. 과일의 종류를 상대적/절대적 경로에 1개씩 이미지를 넣고, 호출하여 출력하세요.-->
+<h2>2번문제...</h2><hr>
+					사과(같은폴더):<img src="apple.jpg" width="100" height="100"/><br>
+					바나나(다른폴더):<img src="/a00_img/banana.jpg" width="100" height="100"/><br>
+<!-- [1단계:개념] 3. 리스트 정렬 태그의 기본 속성을 예제를 통해서 설명하세요.-->
+		<h2>3번문제...</h2><hr>
+					<ul type="circle"> <!-- 순서가 없는 방식 circle,square,default가잇다. -->
+					<li>출력부분이며, &lt;/li&gt;는 없어도된다
+					 </ul>
+<!-- [1단계:코드] 4. 학원 출석시 등원 진행 순서를 정렬리스트로 로마자 V 부터 처리해보세요.-->
+					<h2>4번문제...</h2><hr>
+					<ol type="I" start="V">
+					<li> 입실
+					<li> 중간확인
+					<li> 퇴실
+					</ol>
+<!-- [1단계:코드] 5. dl/ol/ul중첩리스트 태그를 활용하여 학교/반/번호와이름의 3단계 계층 구조의 데이터를 표현하세요.-->
+					<h2>5번문제...</h2><hr>
+					<dl>
+					<dt><strong>남산고등학교</strong></dt>
+						<ol type="1">
+							<li>학년</li>
+								<ol type="1">
+								 <li>반</li>
+								 <ul>
+								   <li> 이정명
+								 </ul>
+								 <li>반</li>
+								  <ul>
+								   <li> 홍길동
+								 </ul>
+								 <li>반</li>
+								  <ul>
+								   <li> 김번복
+								 </ul>
+								</ol>
+							<li>학년</li>
+							<ol type="1">
+								 <li>반</li>
+								 <ul>
+								   <li> 이정명
+								 </ul>
+								 <li>반</li>
+								  <ul>
+								   <li> 홍길동
+								 </ul>
+								 <li>반</li>
+								  <ul>
+								   <li> 김번복
+								 </ul>
+								</ol>
+							<li>학년</li>
+							<ol type="1">
+								 <li>반</li>
+								 <ul>
+								   <li> 이정명
+								 </ul>
+								 <li>반</li>
+								  <ul>
+								   <li> 홍길동
+								 </ul>
+								 <li>반</li>
+								  <ul>
+								   <li> 김번복
+								 </ul>
+								</ol>
+						</ol>
+					</dl>
+<!-- [1단계:개념] 6. 테이블의 계층별 구성요소와 기본 속성을 예제를 통해서 기술하세요.
+						1.표만드는데 사용되는 태그들
+		tlble: 표전체를 담는 컨테이너
+		caption : 표제목
+		thead : 헤딩 셀 그룹
+		tfoot : 바닥 셀 그룹
+		tbody : 데이터 셀 그룹
+		   tr : 테이블에서 행을 처리하는 태그
+		   th : 테이블에서 열 제목(헤딩)에 들어갈 실제 데이터 태그
+		   td : 테이블에서 body에 실제 데이터가 들어가는 태그  -->
+		   <h2>6번문제...</h2><hr>
+		   <table border="1">
+		   	<thead><tr><th>이름</th><th>번호</th><th>나이</th></tr></thead>
+		   	<tbody><tr><td>김떙중</td><td>10번</td><td>34</td></tr>
+		   	<tr><td>박호랑</td><td>11번</td><td>37</td></tr>
+		   	<tr><td>홍나비</td><td>12번</td><td>40</td></tr></tbody>
+		   	<tfoot><tr><td>이름끝</td><td>번호끝</td><td>총 111살</td></tr></tfoot></table>
+		   
+		   
+<!-- [1단계:코드] 7. 테이블 cell 합치기 연습
+                1) 3X3 테이블에 중앙에 세로로 3개셀 합치기 처리 
+                2) 4X4 테이블에 가장 왼쪽 셀  2개셀씩 세로로 합치기 처리 
+                3) 10X10 테이블에 모두의 마블과 같이 중앙에는 비우고 상/하,좌/우 셀만있게 만드세요.-->
+                <h2>7번문제...</h2><hr>
+                				<h2>7-1번문제</h2>
+                				 <table border="1" width="200" height="100">
+                 	<tbody>
+                 	<tr><td></td><td rowspan="3"></td><td></td></tr>
+                 	<tr><td></td><td></td></tr>
+                 	<tr><td></td><td></td></tr>
+                 	</tbody>
+                 </table>
+                 					<h2>7-2번문제</h2>
+                                  <table border="1" width="200" height="100">
+                 	<tbody>
+                 	<tr><td rowspan="2"></td><td></td><td></td><td></td></tr>
+                 	<tr><td></td><td></td><td></td></tr>
+                 	<tr><td rowspan="2"></td><td></td><td></td><td></td></tr>
+                 	<tr><td></td><td></td><td></td></tr>
+                 	</tbody>
+                 </table>
+                 
+                                  <h2>7-3번문제</h2>
+                                  <table border="1" width="1000" height="1000">
+              
+             
+                 	<tbody>
+                	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                	<tr><td></td><td colspan="8" rowspan="8"></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td></tr>
+                	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                 	</tbody>
+                 </table>
+                 
+<!-- [1단계:코드] 8. 회원정보 테이블을 번호, 아이디, 패스워드, 이름, 포인트, 권한 형식으로 3명 데이터를 표현하세요.
+                간격, 넓이 등 오늘 배운 속성 활용-->
+                 <h2>7번문제...</h2><hr>
+                <table align="center" border="10" cellspacing="10" width="80%" height="300" cellpadding="10">
+                <col width="20%"> <col width="20%"> <col width="20%"> <col width="20%"> <col width="10%"><col width="10%">
+                <thead><tr><th>번호</th><th>아이디</th><th>패스워드</th><th>이름</th><th>포인트</th><th>권한</th></tr></thead>
+                <tbody><tr><td>1</td><td>aoddl56</td><td>1111</td><td>이정명</td><td>1000</td><td>사원</td></tr></tbody>
+                <tbody><tr><td>2</td><td>wldms12</td><td>2222</td><td>이지은</td><td>2000</td><td>대리</td></tr></tbody>
+                <tbody><tr><td>3</td><td>WLsl23</td><td>3333</td><td>찌니</td><td>3000</td><td>매니저</td></tr></tbody>
+                
+                </table>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+*/
+</style>
+</head>
+<body>
+
+<hr><h2>[1단계:개념] 1. box형태의 태그가 가지고 있는 요소(margin, border, padding)의 범위를 기술하고,
+           각, 기능별로 설정할 수 있는 내용을 예제를 통해서 기술하세요</h2>
+           			margin:box의 바깥의 범위
+           			border:박스 테두리요소
+           			padding: 박스테두리와 안의 내용과의 거리
+           			
+           			<style>
+           				div.exp1109{ border:3px solid red;
+           							background-color:orange;
+           							margin:10px;
+           							padding:10px;
+           				}
+           			</style>
+           				<div class="exp1109">안녕하세요</div>
+<hr><h2>[1단계:개념] 2. border 상하좌우 위치와 형태를 설정하는 속성과 속성값을 기술하세요..</h2>
+							border-left|right|top|bottom-width|style|color
+<hr><h2>[1단계:확인] 3. border의 4가지 방향 모두 다른 style과 색상을 설정하여 출력하세요</h2>
+					<style>
+						.exp1109_2{
+									border-left-width:2px;
+									border-left-style:solid;
+									border-left-color:red;
+									
+									border-right-width:1px;
+									border-right-style:solid;
+									border-right-color:black;
+									
+									border-top-width:3px;
+									border-top-style:double;
+									border-top-color:blue;
+									
+									border-bottom-width:4px;
+									border-bottom-style:dotted;
+									border-bottom-color:purple;
+						}
+					</style>
+						<div class="exp1109_2">예시2번문제</div>
+<hr><h2>[1단계:개념] 4. border-radius의 속성 옵션을 기술하세요.</h2>
+						border-radius: 20px ==> 4각 전부다 20px만큼 둥글게
+						border-radius: 5px 15px 25px 35px ==> 11시 1시 5시 7시, 시계방향 순으로 각 모서리를 둥글게
+						
+
+
+<hr><h2>[1단계:개념] 5. 배경이미지 관련 속성을 예제를 통해 기술하세요.</h2>
+							<style>
+							.exp1108_5{
+		width:300px; height:300px; /*해당 박스의 크기*/
+		padding:10px;
+	background-repeat:no-repeat; /*사진을 반복할건지*/
+	background-position:top center; /*사진의 위치*/
+	background-image:url("/a00_img/banana.jpg"); /*가져올 사진의 저장 위치*/
+	background-size:100% 50%; 
+	background-color:green; /*박스의 배경 색*/
+	text-align:center; /*박스안의 텍스트 위치*/
+}
+	.exp1108_5 div{display:block;}
+	table{ text-align:center; border:1px solid black;}
+</style>
+			<div class="exp1108_5">ㅎㅇ</div>
+<hr><h2>[1단계:확인] 6. 상품을 소개하는 문자열과 상품이미지를 box에서 문자열과 배경이미지로 처리해보세요.</h2>
+					<!-- class="exp1108_5 -->
+				<div class="exp1108_5">
+					<h2>사과</h2>
+					<div>
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+					</div>
+					<div>
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+						사과는 빨간색 과일로 건강을 유지시켜준다.
+					</div>
+				</div>
+<hr><h2>[1단계:개념] 7. text-shadow와 box-shadow의 옵션을 기술하세요.</h2>
+							<p><h3>#텍스트 그림자 text-shadow</h3>
+						 text-shadow:h-shadow v-hadso wblur-radius color|none<br>
+						2. 속성<br>
+		 				h-shadow/v-shadow: 원본텍스트와 그림자 텍스트 사이의 수평 수직거리(필수)<br>
+						blur-radius : 흐릿한 그림자를 만드는 효과로 흐릿하게 번지는 길이(선택)<br>
+						color: 그림자색(선택)<br>
+						none: 그림자 효과 없음.(선택)</p>
+						
+							<p>
+							<h3>#박스 그림자 , box-shadow</h3>
+							1. 박스 전체에 그림자효과<br>
+							2. 박스 전체에 그림자 효과<br>
+								box-shadow : h-shadow v-shadow<br>
+								blur-radius spread-radius color |none|inset<br>
+								spread-radius : 그림자 크기(선택, 디폴트0)<br>
+							-inset : 음각 박스로 보이게 박스 상단 안쪽(왼쪽과 위쪽에 그림자 형성)
+							</p>
+<hr><h2>[1단계:확인] 8. border-radius와 text-shadow, border를 혼합하여 문자열이 버튼이미지 모양이 되게 둥근 테두리로 처리해보세요</h2>
+						<style>
+							#div1109_8{border:2px solid black; width:100px; height:100px; background:red;
+											border-radius:50%;
+											box-shadow:5px 10px 0px black, 50px 20px 30px gray;
+											color:white;
+											font-weight:700;
+											}
+						</style>
+							
+										<div id="div1109_8"><br><br>&nbsp;&nbsp;&nbsp;폭파버튼</div>		
+<hr><h2>[1단계:개념] 9. display의 3가지 속성의 특성을 설명하세요.</h2>
+	<h3>1. block box(display:block;)</h3>
+		1) 항상 새 라인에서 시작<br>
+		2) 블록박스 내에만 배치<br>
+		3) 옆에 다른 요소 배치 불가능<br>
+		4) width, height으로 크기조절<br>
+		5) padding, border, margin 조절가능<br>
+	<h3>2. inline box(display:inline;)</h3>
+		1) 새 라인에서 시작 불가. 라인 안(inline)에 있음<br>
+		2) 모든 박스 내 배치 가능<br>
+		3) 옆에 다른 요소 배치 가능<br>
+		4) width와 height으로 크기 조절 불가능<br>
+		5) margin-top, margin-bottom 조절 불가능<br>
+	<h3>3. inline bloc box(display: inline-block;)</h3>
+		1) inline의 속성<br>
+			-새 라인에서 시작 불가<br>
+			- 라인 안(inline)에 있음<br>
+			- 모든 박스내 배치 가능<br>
+			- 옆에 다른 요소 배치 가능<br>
+		2) block속성<br>
+			-width와 height크기 조절 가능<br>
+			-padding,border,margin의 조절가능<br>
+					
+<hr><h2>[1단계:확인] 10. li 태그를 inline으로  h3를 block으로  span을 line-block으로 설정하여 출력하세요</h2>
+						<style>
+						#exp1109_10{ display:inline;}
+						#exp1109_10_1{display:block;}
+						span{display:inline-block;}
+						</style>
+
+
+
+
+
+						<ul>
+							<li id="exp1109_10">안녕하세요</li>
+							<li id="exp1109_10">이정명입니다.</li>
+							<li id="exp1109_10">10번 문제 푸는중입니다.</li>
+							<li id="exp1109_10">css는 어렵습니다.</li>
+						</ul>
+						<h3 id="exp1109_10_1">h3시작! 블럭형태로 만들어서<span>&lt;여기는 inline-block형태의 span입니다.&gt;</span>적엇습니다 ㅎㅎ h3끝!</h3>
+						
+					
+<hr><h2>[1단계:확인] 11. div 하위에 h2를 안녕하세요를 문자 하나하나 마다 inline-block으로 나열하고
+            class로 up/down으로 선언 후, 가상클래스로 커서를 위치할 때 마다 위/아래로 움직이게 처리하세요.</h2>
+            <style>
+            .divexp{border:2px solid black;}
+            	.divexp>h2{display:inline-block;}
+            	#down:hover{	position:relative; 
+							right:10px; /*오른으로부터 20px,아래로부터 20px*/
+							bottom:10px;
+							background:red;}
+            	#up:hover{position:relative; 
+							left:10px; /*오른으로부터 20px,아래로부터 20px*/
+							top:10px;
+							background:blue;}
+            </style>
+            		<div class="divexp">
+	            		<h2>대</h2>
+	            		<h2 id="up">한</h2>
+	            		<h2>민</h2>
+	            		<h2 id="down">국</h2>            			
+            		</div>
+</body>
+</html>

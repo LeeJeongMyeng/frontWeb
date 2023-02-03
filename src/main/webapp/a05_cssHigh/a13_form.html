@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+ # 폼 꾸미기
+ 	1.글자 색상 지정
+ 		input[type=text]{color:red}
+ 		
+ 	2. 테두리만들기
+ 		input[type=text]{
+ 			border:2px solid skyblue;
+ 			border-radius:5px;
+ 		}
+ 	3.마우스 올라올 때
+ 		input[type=text] :hover{background:aliceblue;}
+ 	
+ 	4. 포커스를 받을때
+ 		input:focus{font-size:120%;}
+*/
+	label{ display:block; padding:10px;}
+	label span{display:inline-block;
+				  width:90px;
+				text-align:right;
+				padding:10px;
+	}
+	input,textarea{
+		color:blue;
+		border:2px solid skyblue;
+		border-radius:5px;
+	}
+	input[type=text]:focus, input[type=email]:focus{font-size:120%}
+	input:hover, textarea:hover{background:black;}
+	
+	/*
+	ex)로그인 화면을 만들되focus와 border-radius를 적용하여 출력하세요
+	
+	
+	*/
+</style>
+</head>
+<body>
+	<form>
+		<label>
+			<span>이름</span><input type="text" placeholder="Elvis">
+		</label>
+		<label>
+			<span>email</span><input type="text" placeholder="Elvis@graceland.com">
+		</label>
+		<label>
+			<span>내용</span><textarea placeholder="메세지를 남겨주세요"></textarea>
+		</label>
+		<label>
+			<span>email</span><input type="submit" value="등록">
+		</label>
+	</form>
+</body>
+</html>

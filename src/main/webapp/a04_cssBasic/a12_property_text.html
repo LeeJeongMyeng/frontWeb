@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+ #텍스트를 꾸미는 css3 스타일 시트
+ 1. text-indent : 길이 | %처리
+ 	들여쓰기 옵션
+ 2. text-align : left | right | center | justify
+ 	정렬 처리 옵션
+ 3. text-decoration : none | underline | overline | line-throuth
+ 		텍스트 꾸미기      없음      아래줄	       위에줄         사선처리
+*/
+	h3{text-align:right;}
+	span{text-decoration:line-through;}
+	strong{text-decoration:overline;}
+	.p1{text-indent:3em; text-align:justify;} /*3글자 들여쓰기*/
+	.p2{text-indent:1em; text-align:center;} /*글자 들여쓰기,중앙정렬*/
+	.p3{text-indent:3em; background:pink;}
+	strong1{text-decoration:underline; color:red; font-size:10px;}
+
+</style>
+</head>
+<body>
+	<a href="">안녕하세요</a>
+	<a href="" style="text-decoration:none;">안녕하세요</a>
+	<h3> 텍스트 꾸미기</h3>
+	<p class="p1">html 태그만으로 기존의 워드 프로세스와 같이 들여쓰기, 정렬,공백 간격 등과 같은 세밀한
+	                <span>텍스트제어</span>를 할수 없다.</p>
+	<p class="p2">
+		그러나, <strong>스타일 시트</strong>는 이를 가능하게한다.
+		들여쓰기, 정렬에 대해서 알아본다.</p>
+	<hr>
+	<p class="p3">
+	<strong1>Query(제이쿼리)</strong1>는 HTML의 클라이언트 사이드 조작을 단순화<br> 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리다.<br>
+	 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다.
+	
+	</p>
+</body>
+</html>

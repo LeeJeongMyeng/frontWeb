@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>2개의 윈도우를 가집니다.(하위 iframe 포함)</h2><hr>
+	<hr>
+	<!-- 
+		최상위 윈도우(a01_topPage.html)
+		left프레임(leftframe.html)    right프레임(rightframe2.html)
+							
+							upper프레임(a02_sub.html) lower프레임(http://www.mk.co.kr)
+							
+	1.parent
+	  lefe프레임과 right프레임은 최상위 윈도우가 parent이자 top프레임이다.
+	  uppper프레임과 lower프레임은 right프레임 parent이다.
+	 2.top
+	 	모든 프레임은 최상위 윈도우가 top이다.
+	 -->
+	<iframe src="leftframe.html" name="left" width="29%" height="1000"></iframe>
+	<iframe src="rightframe2.html" name="right" width="70%" height="1000"></iframe>
+
+</body>
+</html>

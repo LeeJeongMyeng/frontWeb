@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+	color: #444444;
+	box-sizing:border-box;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+li{
+ 	list-style:none;
+ }
+.box{
+	width:1500px;
+ 	 margin:0 auto; /*박스를 중앙에 두는 문장.*/
+ 	/* border:1px solid orange; */
+ }
+ 
+ .clear{
+  clear:both;
+ }
+ 
+ footer{
+ 	height:400px;
+ 	padding-top:20px;
+ 	border-top:1px solid gray;
+ 	/* background-color:pink; */
+ 
+
+ }
+ 
+body{
+padding-top:150px;
+}
+ 
+#top{
+width:100%;
+background-color:white;
+position:fixed;
+z-index:999;
+top:0;
+border-bottom:1px solid black;
+box-shadow:0 1px 5px 0 black;
+
+}
+
+
+ #Main_log{
+ 	height:30px;
+ 	/* border:1px solid red; */
+ }
+ #Main_log .box ul{
+	float:right;
+	margin-right:30px;
+/* 	border:1px solid orange; */
+} 
+#Main_log .box li{
+	float:left;
+	display:inline;
+ 	font-size:13px;
+ 	margin-left:30px;
+ 	font-weight:600;
+}
+
+#Main_logo_search{
+	height:130px;
+/* 	border:1px solid blue; */
+	padding-left:390px;
+
+}
+#Main_advertisement{
+	height: 400px;
+/* 	border:1px solid purple; */
+}
+
+#Main_product{
+	height:1000px;
+	margin-left:300px;
+/* 	border:1px solid black; */
+}
+
+.top_Main_logo>div{
+		float:left;
+ 		margin:0 0 0 10px;
+ 		font-size:15px;
+ 		margin-left:74px;
+ 		margin-top:20px;
+		font-weight:bold;
+		 }
+
+.top_Main_logo>div>img{
+		width:80px;
+		margin-top:-15px;
+		margin-left:62%;
+		 }
+
+#Main-text{
+	padding-top:30px;
+} 
+#Main_text>div{
+	float:left;
+	padding-right:10px;
+	margin-right:10px;
+	}
+
+#Main_text>div>a:hover{
+color:purple;
+}
+
+#Main_marketkurly{
+border-right:0.1px solid gray;
+}
+
+#search1{
+position: relative;
+    width: 400px;
+    height: 40px;
+    border: 1px solid purple;
+    border-radius: 7px;
+    font-size: 13px;
+    padding-left: 5px;
+    /* padding-top: 0px; */
+    margin-left: 74px;
+    margin-top: 10px;
+}
+
+.main_menu>ul{
+    text-align: center;
+    padding-top: 30px;
+    width: 600px;
+    float: left;
+    margin-left: 80px;
+	
+	}
+.main_menubar>li{
+ 	display:inline-block;
+ 	font-size:18px;
+	font-weight:bold;
+ 	margin-right:80px;
+ 	vertical-align:top;
+ 	
+ }
+ 
+ .main_menubar li:hover a{
+  color:purple;
+  text-decoration:underline;
+ }
+ 
+.menu-box > ul ul {
+display:none;
+position:absolute;
+left:0%
+}
+
+.menu-box > ul ul ul{
+	left:100%;
+	top:0%;
+}
+
+
+.menu-box ul ul{
+ background-color:white;
+ border:1px solid gray;
+ 
+}
+
+.menu-box>ul {
+ display:inline-block;
+ padding:0 10px;
+}
+
+#category div{
+	position:relative;
+}
+
+#category div img{
+	width:30px;
+}
+#category div .black_img {
+	position:absolute;
+	top:-7px;
+	left:5px;
+}
+
+#category div .purple_img {
+	position:absolute;
+	top:-7px;
+	left:5px;
+	display:none;
+}
+
+
+
+#category ul>li:hover a>div>img:nth-child(2) {
+			display:block;
+}
+
+.menu-box ul > li:hover > a {
+	color:purple;
+	background-color:#FFF0F5;
+	/* border:1px solid purple; */
+	
+}
+
+.menu-box ul > li:hover > ul{ /*1차*/
+display:block;
+}
+
+.menu-box > ul>li{
+display:inline-block;
+}
+
+.menu-box ul>li{
+	position:relative;
+}
+
+.menu-box ul>li>a{
+    display: block;
+    padding: 15px 10px 10px 10px;
+    width: 256px;
+    text-align: center;
+    height: 50px;
+}
+
+.menu-box{
+	float:left;
+	margin-left:-60px;
+	margin-top:20px;
+	font-weight:bold;
+	font-size:19px;
+}
+#category>ul *{
+font-size:14px;
+font-weight:normal;
+
+}
+/*====================================================================================================*/
+
+#Main_log ul>li:nth-child(1)>a{
+color:purple;
+}
+
+
+#search2 {
+position:relative;
+background-image:url('/market_img/search2.png');
+background-size:contain;
+background-repeat:no-repeat;
+width:30px;
+height:30px;
+border:0; 
+cursor:pointer;
+top:10px;
+right:50px;
+}
+/*=================================================================================================*/
+
+
+.container{
+	display:flex;
+	flex-direction:column; /* header/section/footer를 위아래로 정렬 */
+	
+}
+
+.New_content{
+	display:flex;
+
+}
+.New_content nav{
+	
+	/* border-right:1px solid gray; */
+	/* margin-right:auto; */
+	flex-basis:400px; /* */
+	flex-shrink:0;
+	/* background-color:skyblue; */
+}
+.New_content main{
+	width: 1500px;
+	/* background-color:pink; */
+}
+
+#New_banner{
+    width: 80%;
+    display: block;
+    object-fit: cover;
+    margin: auto;
+}
+#New_MainText{
+	text-align:center;
+	height:200px;
+	padding:80px 0px;
+	/* background-color:yellow; */
+	font-size:130%;
+}
+/*===========================================================================================================*/
+
+.checkbox>div {
+	margin-left:40px;
+	margin-bottom:15px;
+}
+
+
+
+.checkbox input.checkbox1{
+    font-size: 1em;
+    width: 1.25em; /* 너비 설정 */
+    height:1.25em; /* 높이 설정 */
+    vertical-align: middle;
+}
+.checkbox input.checkbox1 + label{ /* 라벨 텍스트 크기와 수직 정렬 맞춤 */
+    font-size: 15px;
+    font-weight:bold;
+    vertical-align: middle;
+    /* background-color:pink; */
+    cursor:pointer;
+}
+
+.checkbox input.checkbox1 + label:hover{
+	color:purple;
+}
+
+
+.checkbox1 + label{
+    position: relative;
+    
+}
+.checkbox input[type="checkbox"].checkbox1{
+    display: none;
+    margin-top:10px;
+}
+
+.checkbox input[type="checkbox"].checkbox1 + label:before { /* 체크박스 배경 */
+    display: inline-block;
+    content: '';
+    width: 1.5em; 
+    height: 1.5em;
+    border: 2px solid #F4B6D9;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px 5px -6px 0;
+    
+}
+
+.checkbox input[type="checkbox"].checkbox1 + label:after { /* 체크 마크 */
+    position: absolute;
+    left: 6px;
+    top:-4px;
+    content: '✔'; /* 체크 마크 ASCii 문자 */
+    font-size: 1.5em;
+    line-height: 0.8;
+    color: #8a0a8a;
+    transition: all .3s;
+}
+
+[type="checkbox"].checkbox1 + label:after { /* 기본 상태 - 투명에 크기 0 */
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked.checkbox1 + label:after { /* 체크 상태 - 불투명에 크기 1 */
+    opacity: 1;
+    transform: scale(1);
+}
+
+#New_category{
+	font-size:140%;
+	font-weight:bold;
+	margin:30px 0 30px 20px;
+}
+#New_side{
+	
+	padding-bottom:20px;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+/* ==================================================================================================== */
+
+main div:nth-child(1){
+	display:inline-block;
+	font-size:25px;
+	font-weight:bold;
+}
+
+main div:nth-child(2) ul{
+display:inline-block;
+font-size:16px;
+margin-top:-20px;
+padding-right:100px;
+float:right;
+}
+
+main div:nth-child(2) li{
+display:inline-block;
+}
+.items{ /*상품 박스 크기*/
+	width: 319px;
+    float: left;
+    margin: 30px 0 80px 20px;
+    /* background-color: skyblue; */
+}
+
+.items img{
+	width:320px;
+}
+.items .a{
+	color: black;
+	margin-top:10px;
+}
+.items .b{
+	margin-top:10px;
+	font-weight:bold;
+}
+.items .b span{
+	color:#a26f59;
+	font-size:130%
+}
+
+
+.items .c{
+	margin-top:15px;
+	font-size:13px;
+}
+
+.items .c span{
+	color:#a26f59;
+}
+
+#Main_log ul>li:nth-child(1)>a{
+color:purple;
+}
+/* ==================================================================================================== */
+.Main_foot{
+	float:left;
+	position:relative;
+	margin-right:10px;
+
+}
+.Main_foot h1>span{
+	font-size:20px;
+}
+
+
+.Main_foot input{
+width:180px;
+height:50px;
+position:relative;
+top:-10px;
+margin-right:15px;
+border:0
+}
+
+.call_info{
+	display:inline-block;
+	margin-top:20px;
+	color:gray;
+	font-size:15px;
+}
+
+.call_email{
+	font-size:15px;
+	color:gray;
+}
+
+.Main_foot_right{
+float:right;
+margin-right:20px;
+}
+.Main_foot_right li{
+display:inline-block;
+margin-left:10px;
+font-size:15px;
+}
+
+.Main_foot_right div:nth-child(1) li:nth-child(5){
+	font-weight:bold;
+}
+
+.Main_foot_right div:nth-child(2){
+	padding-top:50px;
+	font-size:15px;
+}
+
+#foot_sns{
+	position:relative;
+	top:30px;
+}
+
+#foot_sns img{
+	width:30px;
+	height:30px;
+	margin-right:10px;
+}
+/*=================================================================================================================*/
+
+
+
+
+
+
+</style>
+</head>
+<body>
+	<div id="top">
+		<div id="Main_log">
+			<div class="box">
+				<ul>
+					<li><a href="#">회원가입</a></li>
+					<li><a href="#">로그인</a></li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+			</div><!-- box -->
+		</div> <!-- Main_log -->
+		<div id="Main_logo_search">
+			<div class="box">
+				<div class="top_Main_logo">
+					<div><img src="/market_img/Main_logo.png"></div>
+					<div id=Main_text>
+						<div id="Main_marketkurly"><a href="Market_Main.html">마켓컬리</a> </div>
+						<div id="Main_beautykurly"><a href="%">뷰티컬리</a></div>
+					</div> <!-- Main_text -->
+				</div> <!--top_Main_logo -->
+				
+				<div id="Main_search">
+					<form id="search_form">
+					<input type="text" id="search1" placeholder="검색어를 입력해주세요.">
+						<button type="submit" id="search2"></button>
+					</form>
+				</div> <!-- Main_search -->   
+				<nav class="menu-box">
+							<ul>
+								<li id="category"><a href="#">카테고리</a>
+									<ul>    
+										<li><a href="#">
+										<div class="full_img"> 
+										<img src="/market_img/category_img/black/cheso.webp" class=black_img>
+										<img src="/market_img/category_img/purple/cheso.webp" class=purple_img></div>채소</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+											
+										<li><a href="#"><div> 
+										<img src="/market_img/category_img/black/fruit.webp" class=black_img>
+										<img src="/market_img/category_img/purple/fruit.webp" class=purple_img></div>과일·견과·쌀</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#"><div> 
+										<img src="/market_img/category_img/black/shrimp.webp" class=black_img>
+										<img src="/market_img/category_img/purple/shrimp.webp" class=purple_img></div>수산·해산·건어물</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#"><div> 
+										<img src="/market_img/category_img/black/gogi.webp" class=black_img>
+										<img src="/market_img/category_img/purple/gogi.webp" class=purple_img></div>정육·계란</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#"><div> 
+										<img src="/market_img/category_img/black/kitchen.webp" class=black_img>
+										<img src="/market_img/category_img/purple/kitchen.webp" class=purple_img></div>국·반찬·메인요리</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#"><div> 
+										<img src="/market_img/category_img/black/salad.webp" class=black_img>
+										<img src="/market_img/category_img/purple/salad.webp" class=purple_img></div>샐러드·간편식</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#"><div> 
+										<img src="/market_img/category_img/black/salad.webp" class=black_img>
+										<img src="/market_img/category_img/purple/salad.webp" class=purple_img></div>양념·면·오일</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>	
+							</ul>
+						</nav> <!-- 메뉴박스 -->
+				<nav class="main_menu"><!-- 네비 태그 보통 메인메뉴를 나열할 떄 많이 쓴다. -->
+					<ul class="main_menubar">
+						<li><a href="Market_NewProd.html">신상품</a></li>
+						<li><a href="Market_BestProd.html">베스트</a></li>
+						<li><a href="Market_AlDdulProd.html">알뜰쇼핑</a></li>
+						<li><a href="a">특가혜택</a></li>	
+					</ul> <!-- main_menubar -->
+				</nav><!-- main_meno -->
+			</div> <!-- box -->
+		</div> <!-- Main_logo_search -->
+	</div>
+	
+	
+	<div class="box" id="New_container">
+		<div><a href="#"><img src="/market_img/AlDdul_Banner.jpg" id="New_banner"></a></div>
+		<div id="New_MainText"><h1>알뜰쇼핑</h1></div>
+			<section class="New_content">
+				<nav>
+				<div id=New_side>
+					<div id="New_category">카테고리</div>
+					<form>
+					<div class="checkbox">
+						<div>
+					    <input type="checkbox" name="check1" id="check1" value="1" class="checkbox1">
+					    <label for="check1">수산·해산·건어물</label><br>
+					    </div>
+					    
+					    <div>
+					    <input type="checkbox" name="check1" id="check2" value="2" class="checkbox1">
+					    <label for="check2">생활용품·리빙·캠핑</label><br>
+					    </div>
+					    
+					    <div>
+					    <input type="checkbox" name="check1" id="check3" value="3" class="checkbox1">
+					    <label for="check3">과일·견과·쌀</label><br>
+					    </div>
+					    
+					    <div>
+					    <input type="checkbox" name="check1" id="check4" value="4" class="checkbox1">
+					    <label for="check4">샐러드·간편식</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check5" value="5" class="checkbox1">
+					    <label for="check5">간식·과자·떡</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check6" value="6" class="checkbox1">
+					    <label for="check6">국·반찬·메인요리</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check7" value="7" class="checkbox1">
+					    <label for="check7">생수·음료·우유·커피</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check8" value="8" class="checkbox1">
+					    <label for="check8">주방용품</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check9" value="9" class="checkbox1">
+					    <label for="check9">반려동물</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check10" value="10" class="checkbox1">
+					    <label for="check10">베이커리·치즈·델리</label><br>
+					    </div>
+					</div><!-- checkbox -->
+					</form>
+					</div><!-- newside -->
+					
+					<div id=New_side>
+					<div id="New_category">브랜드</div>
+					<form>
+					<div class="checkbox">
+						<div>
+					    <input type="checkbox" name="check1" id="check11" value="1" class="checkbox1">
+					    <label for="check11">가농바이오</label><br>
+					    </div>
+					    
+					    <div>
+					    <input type="checkbox" name="check1" id="check12" value="2" class="checkbox1">
+					    <label for="check12">고기대신</label><br>
+					    </div>
+					    
+					    <div>
+					    <input type="checkbox" name="check1" id="check13" value="3" class="checkbox1">
+					    <label for="check13">그라놀로지</label><br>
+					    </div>
+					    
+					    <div>
+					    <input type="checkbox" name="check1" id="check14" value="4" class="checkbox1">
+					    <label for="check14">기라델리</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check15" value="5" class="checkbox1">
+					    <label for="check15">내추로</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check16" value="6" class="checkbox1">
+					    <label for="check16">네스카페</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check17" value="7" class="checkbox1">
+					    <label for="check17">네스프레소</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check18" value="8" class="checkbox1">
+					    <label for="check18">노티드</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check19" value="8" class="checkbox1">
+					    <label for="check19">농협</label><br>
+					    </div>
+					    <div>
+					    <input type="checkbox" name="check1" id="check8" value="8" class="checkbox1">
+					    <label for="check8">다담정</label><br>
+					    </div>
+					</div><!-- checkbox -->
+					</form>
+					</div><!-- newside -->
+				
+				</nav>
+				
+				<main>
+					<div> 총 xxx건</div>
+					<div>
+						<ul>
+							<li><a href="#">추천순</a></li>
+							<li>|</li>
+							<li><a href="#">신상품순</a></li>
+							<li>|</li>
+							<li><a href="#">판매량순</a></li>
+							<li>|</li>
+							<li><a href="#">혜택순</a></li>
+							<li>|</li>
+							<li><a href="#">낮은가격순</a></li>
+							<li>|</li>
+							<li><a href="#">높은가격순</a></li>
+						</ul>
+					</div>
+					
+					<div class="clear"></div>
+					
+					<ul class="items">
+						<li><a href="#"><img src="/market_img/kywie.avif"></a><li>
+						<li class="a"><a href="#">러쉬 더시 바디 스프레이 200ml (1개)</a></li>
+						<li class="b"><a href="#">34,890원 <span> 24%</span></a></li>
+						<li class="c"><a href="#">오래가는 &quot;<span>지속력</span>&quot;과  뛰어난 &quot;<span>분사력</span>&quot;</a></li>				
+					</ul>
+					<ul class="items">
+						<li><a href="#"><img src="/market_img/kywie.avif"></a><li>
+						<li class="a"><a href="#">러쉬 더시 바디 스프레이 200ml (1개)</a></li>
+						<li class="b"><a href="#">34,890원 <span> 24%</span></a></li>
+						<li class="c"><a href="#">오래가는 &quot;<span>지속력</span>&quot;과  뛰어난 &quot;<span>분사력</span>&quot;</a></li>				
+					</ul>
+					<ul class="items">
+						<li><a href="#"><img src="/market_img/kywie.avif"></a><li>
+						<li class="a"><a href="#">러쉬 더시 바디 스프레이 200ml (1개)</a></li>
+						<li class="b"><a href="#">34,890원 <span> 24%</span></a></li>
+						<li class="c"><a href="#">오래가는 &quot;<span>지속력</span>&quot;과  뛰어난 &quot;<span>분사력</span>&quot;</a></li>				
+					</ul>
+					<ul class="items">
+						<li><a href="#"><img src="/market_img/kywie.avif"></a><li>
+						<li class="a"><a href="#">러쉬 더시 바디 스프레이 200ml (1개)</a></li>
+						<li class="b"><a href="#">34,890원 <span> 24%</span></a></li>
+						<li class="c"><a href="#">오래가는 &quot;<span>지속력</span>&quot;과  뛰어난 &quot;<span>분사력</span>&quot;</a></li>				
+					</ul>
+					<ul class="items">
+						<li><a href="#"><img src="/market_img/kywie.avif"></a><li>
+						<li class="a"><a href="#">러쉬 더시 바디 스프레이 200ml (1개)</a></li>
+						<li class="b"><a href="#">34,890원 <span> 24%</span></a></li>
+						<li class="c"><a href="#">오래가는 &quot;<span>지속력</span>&quot;과  뛰어난 &quot;<span>분사력</span>&quot;</a></li>				
+					</ul>
+					<ul class="items">
+						<li><a href="#"><img src="/market_img/kywie.avif"></a><li>
+						<li class="a"><a href="#">러쉬 더시 바디 스프레이 200ml (1개)</a></li>
+						<li class="b"><a href="#">34,890원 <span> 24%</span></a></li>
+						<li class="c"><a href="#">오래가는 &quot;<span>지속력</span>&quot;과  뛰어난 &quot;<span>분사력</span>&quot;</a></li>				
+					</ul>
+					
+					
+				</main>
+			</section>
+		</div><!-- box -->
+						
+		
+
+
+<br><br><br><br><br><br><br>
+		<footer>
+			<div class="box">
+				<div class=Main_foot>
+					<h2>고객행복센터</h2>
+					<h1>1644-1107 <span>월~토요일 오전7시 - 오후6시</span></h1> 
+					<div>
+					<input type="button" value="카카오톡 문의" onClick="dd">
+							<div class="call_info">
+								월-토요일 | 오전7시-오후6시<br>
+								일/공휴일 | 오전7시-오후1시
+							</div>
+					</div>
+					<div>
+					<input type="button" value="1:1문의" onClick="dd">
+							<div class="call_info">
+								365일<br>
+								고객센터 운영시간에 순차적으로<br>
+								답변드리겠습니다.
+							</div>
+					</div>
+					<div>
+					<input type="button" value="대량 주문 문의" onClick="dd">
+							<div class="call_info">
+								월-금요일 | 오전9시-오후6시<br>
+								점심시간 | 낮12시-오후1시
+							</div>
+					</div>
+					<div class="call_email">
+						비회원 문의:help@kurlycorp.com<br>
+						비회원 대량주문 문의 : kurlygift@kurlycorp.com
+					</div>
+						
+				</div> <!-- Main_foot -->
+				<div class=Main_foot_right>  
+					<div>
+						<ul>
+							<li><a href="#">컬리소개</a></li>
+							<li>|</li>
+							<li><a href="#">컬리소개영상</a></li>
+							<li>|</li>
+							<li><a href="#">인재채용</a></li>
+							<li>|</li>
+							<li><a href="#">이용약관</a></li>
+							<li>|</li>
+							<li><a href="#">개인정보처리방침</a></li>
+							<li>|</li>
+							<li><a href="#">이용안내</a></li>
+						</ul>
+					</div>
+					<div>
+						법인명(상호):주식회사 컬리 | 사업자등록번호:261-81-23567 사업자 정보확인<br>
+						통신판매업: 제 2018-서울강남-01646호 | 개인정보보호책임자:이원준<br>
+						주소:서울특별시 강남구 테헤란로 133,18층(역삼동) | 대표이사 김슬아<br>
+						입점문의:입점문의하기|제휴문의:business@kurlycorp.com<br>
+						채용문의:recruit@kurlycorp.com<br>
+						팩스:070-7500-6098<br>
+					</div>
+						<div id="foot_sns"> 
+						<ul>    
+						 	<li><a href="https://www.instagram.com/marketkurly/"><img src="/market_img/instar_logo.jpg"></a>
+						 	<li><a href="https://www.facebook.com/marketkurly"><img src="/market_img/facebook_logo.png"></a>
+						 	<li><a href="https://m.post.naver.com/marketkurly"><img src="/market_img/naverpost_logo.png"></a>
+						 	<li><a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"><img src="/market_img/youtube_logo.png"></a>
+						</ul>
+					
+					</div>
+				</div><!-- Main_foot_right -->
+			</div> <!-- box -->
+		</footer>
+		
+		
+</body>
+</html>

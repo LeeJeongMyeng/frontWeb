@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+ #가상 클래스 (pseudo-class) 선택자
+ 1. 어떤 조건이나 상황에서 스타일을 적용하도록 만든 선택자
+ 	1) 40개 이상의 많은 가상 클래스 성택자가 있음
+ 		ex) a:visited{color:green;}
+ 		ex2) li:hober{background:yellow;}
+ 
+ 2. 가상클래스의 유형과 내용
+ 	1) 마우스
+ 		:hover - 마우스가 올라가있을떄 , 스타일적용
+ 		:active - 마우스로 클릭하고있는 상황의 스타일
+ 	
+ 	2) 폼 하위요소
+ 		:focus - 폼요소가 키보드나 마우스 클릭으로 포커스를 받을 때 스타일 적용
+
+	3) 링크
+		:link -방문하지 않은 링크에 스타일 적용
+		:visited - 방문했던 링크에 스타일 적용
+	
+	4) 블록:
+		first-letter - <p>,<div> 등과 같은 블록형 태그의 첫 글자에 스타일 적용
+		first-letter와 동일하면 span과 같은 인라인 태그에는 적용되지 않음
+		:first-line -<p>,<div>등과 같은 블록형 태그의 첫 라인에 스타일적용 :: first-line과 동일
+	
+	5) 구조
+		:nth-child(even|odd) -짝수/홀수번째 모든 자식 태그에 스타일 적용
+		:nth-child(1) -첫번쨰 자식 태그에 스타일 적용
+		:nth-child(3n+1) - 동일한 태그를 3개 단뒤로 그룹되어 처리할때,
+			첫번쨰에 대한 스타일 적용
+			ex) h2:nth-child(3n+1)
+			<h2> 3n+1	
+			<h2> 3n+2
+			<h2> 3n
+			<h2> 3n+1
+			<h2> 3n+2	
+			<h2> 3n
+			<h2> 3n+1
+*/
+	h3:first-letter{color:red; font-size:20px;}
+/* ex) h4로 영문으로 무지개 색상(첫자 색상 및 글자 크기조절)을 리스트 하되, 마우스를 지나갈떄  배경색상과 글자색상이 변하게 처리*/
+	h4:first-letter{color:blue; font-size:30px;}
+	h4:hover{background-color:skyblue; font-size:40px;}
+	h2:nth-child(3n+1){background:orange;}
+	h2:nth-child(even){color:blue;}
+	tr:nth-child(even){background:pink; }
+	tr:hover{color:red;font-size:20px;}
+	input:focus{background:red;}
+</style>
+</head>
+<body>
+	<h3>form요소 객체 focus처리</h3>
+	물건명:<input type="text">
+
+
+	<table width=50% height="200" border="1">
+		<tr><td>1</td><td>6</td><td></td><td></td><td></td></tr>
+		<tr><td>2</td><td>7</td><td></td><td></td><td></td></tr>
+		<tr><td>3</td><td>8</td><td></td><td></td><td></td></tr>
+		<tr><td>4</td><td>9</td><td></td><td></td><td></td></tr>
+		<tr><td>5</td><td>10</td><td></td><td></td><td></td></tr>
+
+	</table>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h2>안녕</h2>
+	<h3>안녕하세요!</h3>
+	<h4>예시입니다.</h4>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+	#배경 다루기
+		1. 배경색이나 이미지 지정
+		  1)background-color:배경색상
+		  2) background-image: 배경 이미지 지정
+		     ex)background-image:url("해당이미지(상대/절대주소)")
+		     
+		2. 배경이미지의 위치	
+		   1)background-position : center cener;
+		   		박스 중간에 이미지 출력
+		
+		3. 배경 이미지 반복 출력
+			1) background-repeat:repeat-y : 위에서 아래로 이미지 반복출력
+			
+*/
+div.cls01{
+	width:50%; height:500px;
+	background-color:skyblue;
+	background-size:200px 200px;
+	background-image:url("./media/spongebob.png");
+	/* 
+		./media : 현재폴더에 media폴더가 있을때, 접그너맃
+		 /media : webapp하위에 media로 절대경로로 선언.
+	*/
+	background-repeat:repeat-y;
+	/* 배경이미지는 default로는 반복되어 진다. no-repeat를 통해서 반복을 중단하고
+		repeat-x/repeat-y를 통해 x축과 y축으로 나누어서 처리할 수 있다.
+	*/
+	background-position:left center;}
+	/* top/center/bottom
+		 left/enter/right등으로 설정가능하다.*/
+
+/*좋아하는 배경이미지 다운받아 해다 ㅇ내용(시/가사)써뵈기*/
+div.exp{
+		width:1500px; height:300px;
+	background-repeat:no-repeat;
+	background-image:url("/a00_img/banana.jpg");
+	background-size:250px 280px;
+	background-color:green;
+	text-align:center;
+}
+
+div.cls02{
+width:200px; height:200px;
+color:blueviolet; font-size:16px;}
+
+</style>
+</head>
+<body>
+	<div class="cls01">
+		안녕하세요. 배경이미지 연습입니다.
+		안녕하세요. 배경이미지 연습입니다.
+		안녕하세요. 배경이미지 연습입니다.
+		안녕하세요. 배경이미지 연습입니다.
+		안녕하세요. 배경이미지 연습입니다.
+		안녕하세요. 배경이미지 연습입니다.
+	</div>
+	<div class="cls02">
+		안녕하세요. 배경이미지 연습입니다.</div>
+		
+	<div class="exp"; >
+		<h3>산</h3>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br><br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		푸르다 푸루리 푸루리요<br>
+		
+		
+	</div>	
+</body>
+</html>

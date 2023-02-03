@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+#표만들기 table
+	1.표만드는데 사용되는 태그들
+		tlble: 표전체를 담는 컨테이너
+		caption : 표제목
+		col : 컬럼당 간격설정 width속성
+		thead : 헤딩 셀 그룹
+		tfoot : 바닥 셀 그룹 (순서와 상관없이 가장 밑으로 처리가 된다.)
+		tbody : 데이터 셀 그룹
+		   tr : 테이블에서 행을 처리하는 태그, thead/tbody/tfoot 하위에 행단위처리
+		   th : 테이블에서 열 제목(헤딩)에 들어갈 실제 데이터 태그
+		   	중앙정렬/굵기 처리를 기본적으로 가지고있다.
+		   td : 테이블에서 body에 실제 데이터가 들어가는 태그
+ -->
+ 	<h3>기본 구조를 가진 표</h3>
+ 	<hr>
+ 	<table border="1"> <!-- 테이블 전체의 border(셀간의 간격)의 굵기 -->
+ 		<caption>1학기 성적</caption>
+ 		<thead>
+ 			<tr>
+ 			<th>이름</th><th>html</th><th>css</th>
+ 			</tr>
+ 			</thead>
+ 	<tbody>
+ 	<tr><td>황기태</td><td>80</td><td>40</td></tr>
+ 	<tr><td>이재문</td><td>70</td><td>50</td></tr>
+ 	<tr><td>김병은</td><td>60</td><td>60</td></tr>
+ 	
+ 	</tbody>
+ 	<tfoot>
+ 	<tr>
+ 	<th>합</th><td>210</td><td>150</td>
+ 	</tr>
+ 	</tfoot>
+ 	</table>
+ 	
+ <!-- ex) 번호 이름 국어 영어 수학
+ 			을 타이틀로 학생 3명의 실제 데이터를 할당하여 출력 -->
+ 		<h3>예제문제 테이블</h3>	
+ 		<hr>
+	<table border="4">
+<!--  	<caption>2학기 성적</caption>-->
+	<thead>
+		<tr><th>번호</th><th>이름</th><th>국어</th><th>영어</th><th>수학</th>	</tr>
+	</thead>
+	<tbody>
+	<tr><td>1</td><td>이정명</td><td>90</td><td>80</td><td>70</td></tr>
+	<tr><td>2</td><td>이지은</td><td>60</td><td>50</td><td>40</td></tr>
+	<tr><td>3</td><td>찌니</td><td>20</td><td>10</td><td>30</td></tr>
+	</tbody>
+	<tfoot>
+	<tr><th colspan="2">합</th><td>170</td><td>140</td><td>140</td></tr>
+	</tfoot>
+	
+	</table>
+ 	
+</body>
+</html>

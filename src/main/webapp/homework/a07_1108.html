@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+*/
+</style>
+</head>
+<body>
+<hr>[1단계:개념] 1. 선택자의 기본 선언 형식을 화면에 처리하세요.
+				<p>
+				class의 경우 ==> .클래스명 <br>
+				id 선택의 경우 ==> #아이디명<br>
+				직계 자식만 선택 &gt;
+				하위전부다 일 경우 띄워쓰기
+				</p>
+<hr>[1단계:개념] 2. 2중 선택자 및 선택자/속성 선언 형식을 기술하고 예제를 만들고 설명하세요.
+				<style>
+					div>#id11081{background:pink;} /*div바로 아래 자식의 id11081 을가진 태그의 배경속성*/
+				</style>
+					<div>
+						<h3 id="id11081">안녕하세요.</h3>
+					</div>
+<hr>[1단계:개념] 3. 부모/자식 관계 계층과 조상/자손 관계 계층의 차이를 선택자와 함께 설명하세요.
+				<p> div&gt;p ==> div가 부모 p가 자식선택자로써, div바로 아래의는 p만 해당이된다.<br>
+				    div p ==> 조상 자손관계로써  div안의 모든 p가 해당이된다.<p>
+<hr>[1단계:개념] 4. css에 속성을 이용하여 선택자를 사용하는 경우를 기술하세요.<br>
+				속성 선택자<br>
+			1) html 태그의 특정 속성(attribute)에 대해 값이 일치하는 태그에만<br>
+				스타일을 적용하는 선택자<br>
+				ex) input[type=text]{color:red;}<br>
+					-type이 속성값이 text인 input태그에 적용<br>
+<hr>[1단계:확인] 5. 사원정보등록(사원번호, 사원명, 등 emp 컬럼) 화면에서 속성값을 이용한 선택자를 통해서 
+               글자색상이나 배경색상을 설정하세요.  <br>
+               <style>
+               		input[name=empno1108]{background:silver;}
+               		input[name=ename1108]{background:yellow;}
+               		input[name=sal1108]{background:green;}
+               </style>
+               <h4>사원정보등록</h4>
+               	사원번호:<input type="text" name="empno1108"><br>
+               	사원명:<input type="text" name="ename1108"><br>
+               	연봉:<input type="text" name="sal1108"><br>
+               	
+<hr>[1단계:개념] 6. 가상클래스란 무엇인지? 종류별 기능별 내용을 예제를 통해서 설명하세요.<br>
+<style>
+a:link{color:black;} /*방문하지않은 사이트를 포시할때 색*/
+	a:visited{color:red;} /*방문한 사이트를 표시할 색*/
+	a:hover{color:yellow;}/*마우스를 올렷을떄 색, 여러가지곳에서 쓰인다.*/
+	a:active{color:green;} /*누르고잇을때 색*/
+	a:focus{color:white;} /*tap을눌럿을 떄 해당 부분이 선택이되면 표시되는색*/
+	input:focus{background-color:black; color:white;}
+</style>
+<a href="https://opentutorials.org">방문함</a>
+ <a href="https://a.a">방문안함</a>
+ <input type="text">
+<hr>[1단계:확인] 7. 인터넷상 가상클래스가 적용된 게시판을 확인하고, 해당 게신판에서 사용하는 가상클래스를 적용하여
+                게시판을 만들어 보세요.<br>
+                
+<hr>[1단계:개념] 8. 색상 설정 방법 3가지 형식을 예제로 처리하세요.<br>
+				<style>
+ 		/*1) 색 이름으로 표현: css3표준에서는 140개 색의 이름을 정하고 있다.*/
+				 h2{color:blue;}
+ 		/*2) 16진수 코드로 표현 : #6A2BE2 ==> 16진수16진수16진수로 색상비율조합*/
+				h3{color:#6A2BE2}
+ 		/*3) 10진수 코드와 rgb()로 표현*/
+ 				h4{color:rgb(138,43,226)}
+ 				</style>
+ 				<h2>색이름표현</h2>
+ 				<h3>16진수로 표현</h3>
+ 				<h4>10진수+rgb로 표현</h4>
+<hr>[1단계:개념] 9. 문단 관련 속성을 기술하고, 기본 예제를 통하여 처리하세요.<br>
+<style>
+	point{color:blue; font-size:15px}
+	#p11081{background:skyblue;}
+	#p11082{color:green;}
+	#p11083{text-align:center; text-decoration:underline;}
+</style>
+
+					<p id=p11081>안녕하세요 <point>이정명</point>입니다.(배경색 스카이블루, 이름에 파란글씨+글씨크기증가)</p>
+					<p id=p11082>반갑습니다(글자색 초록색)</p>
+					<p id=p11083>안녕히가세요.(글자 중앙정렬,아래밑줄)</p>
+					
+				
+<hr>[1단계:확인] 10. 애국가를 검색해서 절별로 문단을 만들고, 들여쓰기, 중간 강조 글자에 대한 언더바 등 설정하여
+                출력해세요.<br>
+                <style>
+                h4{background:black; color:white;}
+                #k1{text-indent:3em;}
+                #k2{text-decoration:line-through;}
+                #k3{font-style:italic;}
+                #k4:first-letter{font-size:300%;}
+                power{text-decoration:underline;}       
+                </style>
+                <h4>애국가 1절</h4>
+               <p id="k1"> 동해 물과 백두산이 마르고 닳도록</p><br>
+				<p id="k2">하느님이 보우하사 우리나라 만세.</p><br>
+				<p id="k3">무궁화 삼천리 화려 강산</p><br>
+				<p id="k4">대한 사람, 대한으로 길이 보전하세.</p><br>
+<hr>[1단계:개념] 11. 상대적 크기와 절대적 크기의 단위의 차이를 기술하세요.<br> 
+					<h4>상대적 크기</h4>
+					<p>선택자가 가지고있는 고유의 글자 크기에서 몇배키울지 정한다 ex)3배 ==> 3em 혹은 300%</p>
+					<h4>절대적크기</h4>
+					<p>절대적 크기는 일반적인 길이 측정 단위를 기준으로 설정하는 것을 말한다. ex) cm,mm,in,px 등</p>
+					
+<hr>[1단계:개념] 12. font 관련 속성에 대하여 나열하고, 한번에 설정하는 옵션을 내용을 예제를 통해서 기술하세요. <br>
+					1. font-family font-family: Arial, "Times New Roman", Serif;<br>
+ 					2. font-size 글자크기<br>
+ 					3. font-style 글자의 모양<br>			
+ 					4.font-weight 글자의 굵기<br>
+ 					5. font 속성<br>
+		<!--  <style>
+			*{font-size:15px; color:purple} /*해당 페이지전체 글자 사이즈 및 글자색 보라색*/
+			</style> -->
+<hr>[1단계:확인] 13. 지금까지 배운 과목명을 한글로 글자체, 굵기, 크기, 스타일을 설정하여 출력하세요.<br>
+				
+				<h2 style="font-family: 궁서체; color:orange;">java</h2>
+				<h2 style="font-size:200%;">오라클 sql</h2>
+				<h2 style="font-weight:300; color:purple;">html</h2>
+				<h2 style="background:blue; color:white;">css</h2>
+</body>
+</html>

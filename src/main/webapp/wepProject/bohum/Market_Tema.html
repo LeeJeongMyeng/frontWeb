@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+	color:black;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+ 	list-style:none;
+ }
+.box{
+	width:1000px;
+ 	margin:0 auto; /*박스를 중앙에 두는 문장.*/
+ 	border:1px solid orange;
+ }
+ footer{
+ 	height:600px;
+ 	border:1px solid yellow;
+ 	border-bottom: 2px solid yellow;
+ }
+ #Main_log{
+ 	height:30px;
+ 	border:1px solid red;
+ }
+ #Main_log .box ul{
+	float:right;
+	margin-right:30px;
+	border:1px solid orange;
+} 
+#Main_log .box li{
+	float:left;
+	display:inline;
+ 	font-size:10px;
+ 	margin-left:30px;
+ 	font-weight:600;
+}
+
+#Main_logo_search{
+	height:130px;
+	border:1px solid blue;
+	padding-left:80px;
+
+}
+#Main_advertisement{
+	height: 600px;
+	border:1px solid purple;
+}
+
+#Main_product{
+	height:1000px;
+	border:1px solid black;
+}
+.top_Main_logo>div{
+		float:left;
+ 		margin:0 0 0 10px;
+ 		font-size:15px;
+ 		margin-left:10px;
+ 		margin-top:20px;
+		font-weight:bold;
+		 }
+
+.top_Main_logo>div>img{
+		width:80px;
+		margin-top:-15px;
+		 }
+#Main-text{
+	padding-top:30px;
+} 
+#Main_text>div{
+	float:left;
+	padding-right:10px;
+	margin-right:10px;
+	}
+
+#Main_text>div>a:hover{
+color:purple;
+}
+
+#Main_marketkurly{
+border-right:0.1px solid gray;
+}
+
+#search1{
+position: relative;
+    width: 350px;
+    height: 40px;
+    border: 1px solid purple;
+    border-radius: 7px;
+    font-size: 13px;
+    padding-left: 5px;
+    /* padding-top: 0px; */
+    margin-left: 42px;
+    margin-top: 10px;
+}
+
+.main_menu>ul{
+    text-align: center;
+    padding-top: 30px;
+    width: 500px;
+    float: right;
+    margin-right: 200px;
+	
+	}
+.main_menubar>li{
+ 	display:inline-block;
+ 	font-size:15px;
+	font-weight:bold;
+ 	margin-right:50px;
+ 	vertical-align:top;
+ 	
+ }
+.menu-box > ul ul {
+display:none;
+position:absolute;
+left:-10%
+}
+
+.menu-box > ul ul ul{
+	left:100%;
+	top:0%;
+}
+
+
+.menu-box ul ul{
+	width:100px;
+ background-color:#FFF0F5;
+}
+
+.menu-box>ul {
+ display:inline-block;
+ padding:0 10px;
+}
+
+
+
+.menu-box ul > li:hover > a {
+	color:purple;
+}
+
+.menu-box ul > li:hover > ul{ /*1차*/
+display:block;
+}
+
+.menu-box > ul>li{
+display:inline-block;
+}
+
+.menu-box ul>li{
+	position:relative;
+}
+
+.menu-box ul>li>a{
+display:block;
+padding:10px;
+padding-left:80px;
+}
+
+.menu-box{
+	float:left;
+	margin-left:-60px;
+	margin-top:20px;
+	font-weight:bold;
+	font-size:15px;
+}
+#category>ul *{
+font-size:14px;
+font-weight:normal;
+
+}
+#banner1{
+width:100%
+}
+
+
+</style>
+</head>
+<body>
+		<div id="Main_log">
+			<div class="box">
+				<ul>
+					<li style="color:purple;">회원가입</li>
+					<li>로그인</li>
+					<li>고객센터</li>
+				</ul>
+			</div><!-- box -->
+		</div> <!-- Main_log -->
+		<div id="Main_logo_search">
+			<div class="box">
+				<div class="top_Main_logo">
+					<div><img src="/market_img/Main_logo.png"></div>
+					<div id=Main_text>
+						<div id="Main_marketkurly"><a href="%">마켓컬리</a> </div>
+						<div id="Main_beautykurly"><a href="%">뷰티컬리</a></div>
+					</div> <!-- Main_text -->
+				</div> <!--top_Main_logo -->
+				
+				<div id="Main_search">
+					<form>
+					<input type="text" id="search1" placeholder="검색어를 입력해주세요.">
+						<input type="submit" id="search2">
+					</form>
+				</div> <!-- Main_search -->   
+				<nav class="menu-box">
+							<ul>
+								<li id="category"><a href="#">카테고리</a>
+									<ul>
+										<li><a href="#">메뉴1</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+											
+										<li><a href="#">메뉴2</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#">메뉴3</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#">메뉴4</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#">메뉴5</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#">메뉴6</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+										<li><a href="#">메뉴7</a>
+											<ul>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+												<li><a href="#">2차메뉴1</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>	
+							</ul>
+						</nav> <!-- 메뉴박스 -->
+				<nav class="main_menu"><!-- 네비 태그 보통 메인메뉴를 나열할 떄 많이 쓴다. -->
+					<ul class="main_menubar">
+						<li><a href="a">신상품</a></li>
+						<li><a href="a">베스트</a></li>
+						<li><a href="a">알뜰쇼핑</a></li>
+						<li><a href="a">특가혜택</a></li>	
+					</ul> <!-- main_menubar -->
+				</nav><!-- main_meno -->
+			</div> <!-- box -->
+		</div> <!-- Main_logo_search -->
+		
+		
+		
+		
+		
+		
+		
+		<div id="Main_advertisement" style="text-align:center;">
+
+		</div> <!-- Main_advertisement -->
+		
+		
+		
+		
+		
+		
+		<div id="Main_product">
+			<div class="box">
+				<div>메인화면 상품진열</div>
+			</div>
+		</div>
+		<footer>
+			<div class="box">
+				약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관
+			</div>
+		</footer>
+		
+</body>
+</html>
